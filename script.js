@@ -111,25 +111,81 @@ const soma = document.querySelector("#soma");
 const subtracao = document.querySelector("#subtracao");
 const multiplicacao = document.querySelector("#multiplicacao");
 const divisaoReal = document.querySelector("#divisao-real");
-const divisaoInteira = document.querySelector("#diviao-inteira");
+const divisaoInteira = document.querySelector("#divisao-inteira");
 const pontenciacao = document.querySelector("#potenciacao");
+
 function som() {
-  console.log("olar");
+  let firstValue = document.querySelector("#first-value").valueAsNumber;
+  let secondValue = document.querySelector("#second-value").valueAsNumber;
+  let result = document.querySelector("#result");
+
+  if (isNaN(firstValue) || isNaN(secondValue)) {
+    return alert("Adicione os valores corretamente");
+  } else {
+    let sum = firstValue + secondValue;
+    result.innerText = `O resultado de ${firstValue} + ${secondValue} é ${sum}`;
+    return;
+  }
 }
+
 function sub() {
-  console.log("olar");
+  let firstValue = document.querySelector("#first-value").valueAsNumber;
+  let secondValue = document.querySelector("#second-value").valueAsNumber;
+  let result = document.querySelector("#result");
+
+  if (isNaN(firstValue) || isNaN(secondValue)) {
+    return alert("Adicione os valores corretamente");
+  } else {
+    let sum = firstValue - secondValue;
+    result.innerText = `O resultado de ${firstValue} - ${secondValue} é ${sum}`;
+    return;
+  }
 }
-function som() {
-  console.log("olar");
+
+function mult() {
+  let firstValue = document.querySelector("#first-value").valueAsNumber;
+  let secondValue = document.querySelector("#second-value").valueAsNumber;
+  let result = document.querySelector("#result");
+  if (isNaN(firstValue) || isNaN(secondValue)) {
+    return alert("Adicione os valores corretamente");
+  } else {
+    let sum = firstValue * secondValue;
+    result.innerText = `O resultado de ${firstValue} * ${secondValue} é ${sum}`;
+  }
 }
-function som() {
-  console.log("olar");
+
+function divisao() {
+  let firstValue = document.querySelector("#first-value").valueAsNumber;
+  let secondValue = document.querySelector("#second-value").valueAsNumber;
+  let result = document.querySelector("#result");
+  if (isNaN(firstValue) || isNaN(secondValue)) {
+    return alert("Adicione os valores corretamente");
+  } else {
+    let sum = firstValue / secondValue;
+    result.innerText = `O resultado da divisão de ${firstValue} / ${secondValue} é ${sum}`;
+  }
 }
-function som() {
-  console.log("olar");
+function inteira() {
+  let firstValue = document.querySelector("#first-value").valueAsNumber;
+  let secondValue = document.querySelector("#second-value").valueAsNumber;
+  let result = document.querySelector("#result");
+  if (isNaN(firstValue) || isNaN(secondValue)) {
+    return alert("Adicione os valores corretamente");
+  } else {
+    let sum = firstValue % secondValue;
+    result.innerText = `O resto da divisão entre ${firstValue} e  ${secondValue} igual a ${sum}`;
+  }
 }
-function som() {
-  console.log("olar");
+function pont() {
+  let firstValue = document.querySelector("#first-value").valueAsNumber;
+  let secondValue = document.querySelector("#second-value").valueAsNumber;
+  let result = document.querySelector("#result");
+  if (isNaN(firstValue) || isNaN(secondValue)) {
+    return alert("Adicione os valores corretamente");
+  } else {
+    let sum = firstValue ** secondValue;
+    result.innerText = `A pontenciação de ${firstValue} e  ${secondValue} é igual a ${sum}`;
+  }
 }
 
 soma.addEventListener("click", () => som());
@@ -138,8 +194,8 @@ subtracao.addEventListener("click", () => sub());
 
 multiplicacao.addEventListener("click", () => mult());
 
-divisaoReal.addEventListener("click", () => divisao);
+divisaoReal.addEventListener("click", () => divisao());
 
-divisaoInteira.addEventListener("click", divInteira);
+divisaoInteira.addEventListener("click", () => inteira());
 
-potenciacao.addEventListener("click", pont);
+pontenciacao.addEventListener("click", () => pont());
